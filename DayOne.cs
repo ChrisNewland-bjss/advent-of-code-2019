@@ -8,10 +8,12 @@ namespace AdventOfCode
         public override string Compute(string[] input) {
 
             float output = 0;
+            //Part One
             // float calc(float o) => output += MathF.Floor(o / 3) - 2;
             // var i = input.Select(int.Parse).ToList();
             // i.ForEach(x => calc(x));
 
+            //Part Two
             float calc(float o) => output += o;
             foreach(string s in input) {
                 float o = Int32.Parse(s);

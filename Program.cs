@@ -12,8 +12,8 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            Day day = new DayOne();
-            var input = File.ReadAllLines("input/day1.txt");
+            Day day = new DayTwo();
+            var input = File.ReadAllLines("input/day2.txt");
             Console.WriteLine(day.Compute(input));
         }
     }

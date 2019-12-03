@@ -8,20 +8,26 @@ namespace AdventOfCode
 {
     public class DayTwo : Day
     {
-        public override string Compute(string[] input) {
+        public override string Compute(string[] input) { 
 
-            List<int> list = input[0]
-                .Split(',')
-                .Select(i => int.Parse(i))
-                .ToList();
-            int noun = list[1] = 12;
-            int verb = list[2] = 2;
+            //Part 1
+            calculate(1, initList(input), 12, 2);   
 
-            calculate(list);
-            return "Day 2 - Part Two Result: " + "TODO";
+            //Part 2
+            for(int n = 0; n < 100; n++){
+                for(int v = 0; v < 100; v++){
+                    if (calculate(2, initList(input), n, v) == 19690720) {
+                        return (100 * n + v).ToString();
+                    }
+                }
+            }
+            return null;
         }
 
-        private int calculate(List<int> list) {
+        private int calculate(int part, List<int> list, int noun, int verb) {
+
+            list[1] = noun;
+            list[2] = verb;
 
             for(int i = 0; i < list.Count(); i++) {
 
@@ -43,10 +49,16 @@ namespace AdventOfCode
                 else {
                     Console.WriteLine(list[i] + " - Invalid OP Code");
                 }
-            }
-            Console.WriteLine("-------------");
-            Console.WriteLine("Day 2 - Part One Result: " + list[0].ToString());
+            }            
             return list[0];
+        }
+
+        private List<int> initList(String[] input) {
+            List<int> list = input[0]
+                .Split(',')
+                .Select(i => int.Parse(i))
+                .ToList(); 
+            return list;
         }
 
         private int addition(int a, int b) {

@@ -18,7 +18,7 @@ namespace AdventOfCode
 
             Day day = new DayTwo();
             var input = File.ReadAllLines("input/day2.txt");
-            Console.WriteLine(day.Compute(input));
+            Console.WriteLine("Result: " + day.Compute(input));
 
             stopWatch.Stop();
             DisplayDuration(stopWatch);

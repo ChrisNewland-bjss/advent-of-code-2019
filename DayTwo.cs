@@ -16,7 +16,13 @@ namespace AdventOfCode
                 .ToList();
             int noun = list[1] = 12;
             int verb = list[2] = 2;
-            
+
+            calculate(list);
+            return "Day 2 - Part Two Result: " + "TODO";
+        }
+
+        private int calculate(List<int> list) {
+
             for(int i = 0; i < list.Count(); i++) {
 
                 int firstNum = list[i + 1];
@@ -39,7 +45,8 @@ namespace AdventOfCode
                 }
             }
             Console.WriteLine("-------------");
-            return "Day 2 - Part One Result: " + list[0].ToString();
+            Console.WriteLine("Day 2 - Part One Result: " + list[0].ToString());
+            return list[0];
         }
 
         private int addition(int a, int b) {

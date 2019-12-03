@@ -38,7 +38,8 @@ namespace AdventOfCode
                     Console.WriteLine(list[i] + " - Invalid OP Code");
                 }
             }
-            return "Part One Result: " + list[0].ToString();
+            Console.WriteLine("-------------");
+            return "Day 2 - Part One Result: " + list[0].ToString();
         }
 
         private int addition(int a, int b) {

@@ -21,7 +21,8 @@ namespace AdventOfCode
                     calc(o = MathF.Floor(o / 3) - 2);
                 }
             }
-            return output.ToString();
+            Console.WriteLine("-------------");
+            return "Day 1 - Part Two Result: " + output.ToString();
         }
     }
 }
